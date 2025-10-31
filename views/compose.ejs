@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel= "stylesheet" href="/styles/home.css">
+  <style>
+    .btn-submit{
+      border-radius: 20px;
+      padding: 20px;
+      border: none;
+    }
+    .btn-submit:hover{
+      background-color: rgb(159, 92, 92);
+    }
+  </style>
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+    <form method="post" action="/submit" class="blog-form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" placeholder="Enter blog title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="text">Content</label>
+        <textarea id="text" name="text" rows="6" placeholder="Write your post..." maxlength="100" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Publish</button>
+    </form>
+
+</body>
+</html>

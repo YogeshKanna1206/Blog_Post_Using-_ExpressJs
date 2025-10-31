@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+  <div class="first">
+    <h1 class="heading">
+      <%= post.title %>
+    </h1>
+  </div>
+  <div class="second">
+    <h2 class="para">
+        <%= post.text %>
+    </h2>
+  </div>
+</body>
+</html>

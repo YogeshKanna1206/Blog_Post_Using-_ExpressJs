@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+  <div class="contents">
+    
+    <% posts.forEach((element,index) => { %>
+      <div class="titles">
+        <h1><%= index + 1 %>.<%= element.title %></h1>
+        <a href="/posts/<%= index %>" class="btn">Read here</a>
+      </div>
+    <% }) %>
+
+  </div>
+</body>
+</html>
